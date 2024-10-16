@@ -56,7 +56,7 @@ def compile_and_run(code, compiler="g++", compile_flags="", mpi_num_processes=No
         run_command = "./a.out"
     logger.info(f"Running: {run_command}")
     process = subprocess.Popen(
-        run_command.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+        run_command.split(), stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
     )
     while True:
         out = process.stdout.read(1)
