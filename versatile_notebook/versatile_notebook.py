@@ -64,6 +64,7 @@ def compile_and_run(code, compiler="g++", compile_flags="", mpi_num_processes=No
             break
         if out != "":
             sys.stdout.write(out)
+        else:
             sys.stdout.flush()
     if process.returncode != 0:
         logger.error(f"Runtime error with exit code {process.returncode}")
