@@ -58,14 +58,12 @@ def compile_and_run(code, compiler="g++", compile_flags="", mpi_num_processes=No
     process = subprocess.Popen(
         run_command.split(), stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
     )
-    while True:
-        out = process.stdout.read(1)
-        if out == "" and process.poll() != None:
-            break
-        if out != "":
-            sys.stdout.write(out)
-        else:
-            sys.stdout.flush()
+
+    # Stream the output
+    # process.stdout:TextIOWrapper
+    while process.poll() is None:
+        sys.stdout.write(process.stdout.buffer.read1().decode())
+
     if process.returncode != 0:
         logger.error(f"Runtime error with exit code {process.returncode}")
         raise RuntimeError(f"Runtime error with exit code {process.returncode}")
