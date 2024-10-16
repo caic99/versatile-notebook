@@ -21,7 +21,7 @@ Please see [./demo.ipynb](./demo.ipynb) for examples.
 
 First, install and load the extension:
 ```bash
-pip install git+https://github.com/caic99/versatile_notebook
+!pip install git+https://github.com/caic99/versatile_notebook
 %load_ext versatile_notebook
 ```
 
