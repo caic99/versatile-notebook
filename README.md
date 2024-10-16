@@ -14,7 +14,8 @@ The magic saves the code cell to a temporary file, and runs the corresponding co
 > `a.out` is the default output executable name.
 
 Make sure you have the corresponding compiler installed on your system.
-Please see <demo.ipynb> for examples.
+
+Please see [./demo.ipynb](./demo.ipynb) for examples.
 
 ## Installation
 
