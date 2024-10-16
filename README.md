@@ -1,6 +1,6 @@
-# `versatile-notebook`: Make C++, CUDA, and MPI works in Jupyter Notebook
+# `versatile_notebook`: Make C++, CUDA, and MPI works in Jupyter Notebook
 
-`versatile-notebook` is a Jupyter Notebook extension that allows you to write and run C++, CUDA, and MPI code in Jupyter Notebook, without installing a new jupyter kernel.
+`versatile_notebook` is a Jupyter Notebook extension that allows you to write and run C++, CUDA, and MPI code in Jupyter Notebook, without installing a new jupyter kernel.
 It leverages [customized](https://ipython.readthedocs.io/en/stable/config/custommagics.html) [cell magics](https://ipython.readthedocs.io/en/stable/interactive/magics.html) of the default iPython kernel, allowing an drop-in enhancement without installing a new kernel.
 
 The magic saves the code cell to a temporary file, and runs the corresponding compiler to build and run the code.
@@ -21,8 +21,8 @@ Please see [./demo.ipynb](./demo.ipynb) for examples.
 
 First, install and load the extension:
 ```bash
-pip install git+https://github.com/caic99/versatile-notebook
-%load_ext versatile-notebook
+pip install git+https://github.com/caic99/versatile_notebook
+%load_ext versatile_notebook
 ```
 
 Build and run a C++ code cell:
