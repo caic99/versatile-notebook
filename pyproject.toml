@@ -1,0 +1,9 @@
+[project]
+name = "versatile-notebook"
+version = "0.1.0"
+description = "An extension for Jupyter Notebook to run C++, CUDA and MPI code."
+readme = "README.md"
+dependencies = []
+authors = [
+  { name="Chun Cai", email="amoycaic@gmail.com" },
+]
